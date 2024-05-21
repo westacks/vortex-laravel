@@ -1,0 +1,31 @@
+{
+    "name": "westacks/vortex-laravel",
+    "description": "Vortex server adapter for Laravel",
+    "type": "library",
+    "require": {
+        "php": "^8.1",
+        "laravel/framework": "^9.0 || ^10.0 || ^11.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "WeStacks\\Laravel\\Vortex\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dmytro Morozov",
+            "email": "puny.flash@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "WeStacks\\Laravel\\Vortex\\VortexServiceProvider"
+            ],
+            "aliases": {
+                "Vortex": "WeStacks\\Laravel\\Vortex\\Facades\\Vortex"
+            }
+        }
+    }
+}

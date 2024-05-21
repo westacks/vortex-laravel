@@ -1,0 +1,26 @@
+<?php
+
+namespace {{ namespace }};
+
+use Illuminate\Http\Request;
+use WeStacks\Laravel\Vortex\Http\Middleware;
+
+class {{ class }} extends Middleware
+{
+    /**
+     * The root template that's loaded on the first page visit.
+     */
+    protected string $view = 'app';
+
+    /**
+     * Define the props that are shared by default.
+     *
+     * @return array<string, mixed>
+     */
+    public function share(Request $request): array
+    {
+        return array_merge(parent::share($request), [
+            //
+        ]);
+    }
+}
